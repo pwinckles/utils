@@ -32,7 +32,7 @@ public class ExpandLogLines {
     }
 
     private static void expandLogLines(Stream<String> lineStream) {
-        lineStream.flatMap(line -> Arrays.stream(line.split("\\|")))
+        lineStream.map(line -> line.replace("|", "\n"))
                 .forEach(System.out::println);
     }
 
