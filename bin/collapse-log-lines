@@ -1,0 +1,10 @@
+#!/usr/bin/env -S awk -f
+
+/^\s|^$/ { printf("|") }
+!/^\s|^$/ {
+  if (w == 1) {
+    printf("\n");
+  }
+  w=1;
+}
+// { printf("%s", $0) }
