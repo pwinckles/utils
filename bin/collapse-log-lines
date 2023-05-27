@@ -2,9 +2,9 @@
 
 /^\s|^$/ { printf("|") }
 !/^\s|^$/ {
-  if (w == 1) {
+  if (written) {
     printf("\n");
   }
-  w=1;
+  written=1;
 }
 // { printf("%s", $0) }
